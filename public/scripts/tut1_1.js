@@ -41,6 +41,7 @@ var CommentBox = React.createClass({
     return {data: []};
   },
   componentDidMount: function() {
+  	// call ajax when the component is first loaded and every 2 seconds after that.
     this.loadCommentsFromServer();
     setInterval(this.loadCommentsFromServer, this.props.pollInterval);
   },
